@@ -1,12 +1,14 @@
 {
-  "name": "rr-jest-boilerplate",
+  "name": "rr-vitest-boilerplate",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
+    "typecheck": "react-router typegen && tsc",
+    "test": "vitest",
+    "test:watch": "vitest --watch"
   },
   "dependencies": {
     "@react-router/node": "^7.9.2",
@@ -18,13 +20,20 @@
   },
   "devDependencies": {
     "@react-router/dev": "^7.9.2",
+    "@react-router/remix-routes-option-adapter": "^7.9.6",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^14.6.1",
+    "jsdom": "^26.0.0",
     "@tailwindcss/vite": "^4.1.13",
     "@types/node": "^22",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
+    "remix-flat-routes": "^0.8.5",
     "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2",
     "vite": "^7.1.7",
+    "vitest": "^2.1.8",
     "vite-tsconfig-paths": "^5.1.4"
   }
 }
