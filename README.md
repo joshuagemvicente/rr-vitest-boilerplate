@@ -1,4 +1,4 @@
-# Welcome to React Router!
+# Welcome to React Router
 
 A modern, production-ready template for building full-stack React applications using React Router.
 
@@ -83,5 +83,21 @@ Make sure to deploy the output of `npm run build`
 This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
 
 ---
+
+## Prisma using 6.6.0 above
+
+To start you must install dotenv with this particular command:
+-- npm install dotenv
+
+## In the prisma.config.ts, we must import the
+
+import "dotenv/config"
+
+the commands to use the prisma-cli commands:
+-- npx prisma dev (to start the server)
+-- migrations are the same as before
+
+for more info you can visit here:
+<https://www.prisma.io/docs/postgres/database/local-development>
 
 Built with ❤️ using React Router.

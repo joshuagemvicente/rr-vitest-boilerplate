@@ -40,6 +40,14 @@ export const getUserSession = async (request: Request) => {
   throw redirect("/login");
 };
 
+export const requireUserSession = async (request: Request) => {
+  const user = await getUserSession(request);
+  if (!user) {
+    throw redirect("/login");
+  }
+  return user;
+};
+
 export const signOut = async (request: Request) => {
   await auth.api.signOut({
     headers: request.headers,
